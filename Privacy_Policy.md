@@ -29,4 +29,4 @@ This Privacy Policy may be updated periodically to reflect changes in our practi
 
 ## Contact Us
 
-If you have any questions or concerns about this Privacy Policy or the AI Sidebar Extension, please contact us at [your contact email].
+If you have any questions or concerns about this Privacy Policy or the AI Sidebar Extension, please contact me from Issus section.
