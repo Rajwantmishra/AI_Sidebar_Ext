@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="ai-sidebar">
+        <button id="close-sidebar">×</button>
+        <h2>AI Sidebar</h2>
+       
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" data-tab="summarization">Summarization</button>
+            <button class="tab-button" data-tab="chat">Chat</button>
+            <button class="tab-button" data-tab="settings">Settings</button>
+          </div>
+            <div class="tab-content active" id="tab-summarization">
+                <div class="section">
+                    <label for="chat-context">Context:</label>
+                    <textarea id="chat-context" rows="4">“Trigger warning: Harassment. I was waiting for my cab near DLF m, Sector -18, Noida. A bike crossed and the guy sitting at the back waved and asked ‘kya rate legi’. He didn’t even stop and everything happened within a flick of seconds. Thankfully, I’m back at home safely right now,” wrote the journalist on X (formerly Twitter).</textarea>
+                    <button id="summarize-btn">Summarize</button>
+                    <div id="loading-summarization">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div id="summary" class="section">Select text to summarize.</div>
+            </div>
+            <div class="tab-content" id="tab-chat">
+                <div class="panel" style="flex-grow: 1; display: flex; flex-direction: column;">
+                    <div id="chat-history" style="flex-grow: 1; overflow-y: auto;">
+                        <div class="chat-message">
+                            <span class="chat-sender">User: </span>
+                            <span class="chat-content">wht it it</span>
+                        </div>
+                        <div class="chat-message">
+                            <span class="chat-sender">AI: </span>
+                            <span class="chat-content">The provided information seems to be an excerpt from a woman's personal account of verbal harassment that she experienced while waiting for her cab in Noida, India. From the context, the woman is a journalist who shared her experience on a social media platform referred to as X (formerly known as Twitter). The harasser was on a moving bike and he made an inappropriate comment towards her. Despite the unsettling experience, she informed her followers that she got home safely.</span>
+                        </div>
+                    </div>
+                    <div id="loading" style="display: none;">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div id="chat-input-container">
+                        <textarea id="chat-input" rows="2" placeholder="Type a message..."></textarea>
+                        <button id="chat-send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-settings">
+                <div class="section">
+                    <label for="api-key">OpenAI API Key:</label>
+                    <input type="text" id="api-key" placeholder="Enter your API key" style="display: none;">
+                    <span id="api-key-display">********</span>
+                    <button id="edit-key">Edit</button>
+                    <button id="save-key" style="display: none;">Save Key</button>
+                </div>
+                <div class="section">
+                    <label for="fetch-url">Fetch URL:</label>
+                    <input type="text" id="fetch-url" placeholder="Enter the fetch URL">
+                </div>
+                <div class="section">
+                    <label for="model-name">Model Name:</label>
+                    <input type="text" id="model-name" placeholder="Enter the model name">
+                </div>
+                <div class="section">
+                    <label for="system-prompt">System Prompt:</label>
+                    <input type="text" id="system-prompt" placeholder="Enter the system prompt">
+                </div>
+                <button id="save-settings">Save Settings</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
